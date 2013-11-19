@@ -1,0 +1,54 @@
+defaults: &defaults
+  test: 'Hola mundo!'
+
+development:
+  <<: *defaults
+  email:
+    address: 'smtp.gmail.com'
+    port: 587
+    domain: 'gmail.com'
+    default_from: 'Dolem Labs <dolemlabs@gmail.com>'
+  site:
+    url: 'http://localhost:3000'
+    domain: 'localhost.com'
+    maintenance_mode: false
+    name: 'Base'
+    slogan: 'Base site, DEVELOPMENT.'
+    company_name: 'Dolem Labs'
+    email_admin: 'paul.eduardo.marclay@gmail.com'
+    copyright: 'Copyright 2013'
+    
+test:
+  <<: *defaults
+  email:
+    address: 'smtp.gmail.com'
+    port: 587
+    domain: 'gmail.com'
+    default_from: 'Dolem Labs <dolemlabs@gmail.com>'
+  site:
+    url: 'http://localhost:3000'
+    domain: 'localhost.com'
+    maintenance_mode: false
+    name: 'Base'
+    slogan: 'Base site, TEST.'
+    company_name: 'Dolem Labs'
+    email_admin: 'paul.eduardo.marclay@gmail.com'
+    copyright: 'Copyright 2013'
+    
+production:
+  <<: *defaults
+  email:
+    address: 'smtp.gmail.com'
+    port: 587
+    domain: 'gmail.com'
+    default_from: 'Dolem Labs <dolemlabs@gmail.com>'
+  site:
+    url: 'http://localhost:3000'
+    domain: 'localhost.com'
+    maintenance_mode: false
+    name: 'Base'
+    slogan: 'Base site, PRODUCTION.'
+    company_name: 'Dolem Labs'
+    email_admin: 'paul.eduardo.marclay@gmail.com'
+    copyright: 'Copyright 2013'
+    
